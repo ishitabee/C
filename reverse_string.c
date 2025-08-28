@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+int findStringLength(char str[])
+{
+    int length = 0;
+    while (str[length] != '\0')
+    {
+        length++;
+    }
+    return length;
+}
+
 int main() 
 { 
     
@@ -7,13 +17,15 @@ int main()
     printf("This program will reverse a given word.\n");
    
   char anyWord [] = ("Gayathri");
-  int length = sizeof(anyWord) / sizeof(anyWord[0]);
-  int i;
+  char reversedWord [20] = "";
+  int length = findStringLength(anyWord);
+  int i, j;
   
-  for (i = length; i >= 0; --i)
- {
-    printf("%c", anyWord[i]);
- }
+  for (i = length-1, j = 0; i >= 0; --i, j++)
+  {
+      reversedWord[j] = anyWord[i];
+  }
 
+  printf ("The reversed word is: %s\n", reversedWord);
   return 0;
 }
