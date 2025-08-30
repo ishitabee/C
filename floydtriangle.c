@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//nihal is with me on a call
 int main()
 {
     int rows = 0, i = 0, j = 0, num = 1,k=0;
@@ -22,4 +22,5 @@ int main()
     }
 
     return 0;
+
 }
